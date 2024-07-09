@@ -294,6 +294,7 @@ font-family: 'Poppins',sans-serif;
     grid-gap: 16px;
     padding: 16px;
     max-width: 1024px;
+    margin: auto;
 }
 .myskills>header{
     font-size: 40px;
@@ -302,11 +303,11 @@ font-family: 'Poppins',sans-serif;
     color: var(--purple-dark);
     font-family:"Wittgenstein", serif;
 }
-.skill .set{
+.myskills .skill .set{
     background-color:var(--purple);
     padding: 70px;
     width: 50%;
-    margin-left: 150px;
+    margin:auto;
     border-radius: 16px;
     cursor: pointer;
     color: white;
