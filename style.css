@@ -1,0 +1,656 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Wittgenstein:ital,wght@0,400..900;1,400..900&display=swap');
+h1,h2,h3,h4,h5,h6,p,span,button,li,input,textarea,label,select,option{
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --purple:#a855f7;
+    --purple-dark:#9333ea;
+    --pink:#F4C2C2;
+    --text-dark:#1f2937;
+    --text-light:#6b7280;
+    --extra-light:#faf5ff;
+    --max-width:1200px;
+    --transition:.4s ease;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+gap:5px;
+position: fixed;
+justify-content: space-between;
+width: 100vw;
+top: 0;
+left: 0;
+padding: 1rem 3rem;
+box-sizing: border-box;
+align-items: center;
+color: var(--white);
+z-index: 100;
+
+}
+.nav-content {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--purple);
+    transition: .3s;
+}
+nav .logo a:hover {
+    color: var(--purple-dark);
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    text-transform: uppercase;
+}
+nav ul li{
+    font-family: 'Wittgenstein','serif';
+    font-weight: 550;
+}
+nav .mobile1-menu{
+    display: none;
+}
+nav a{
+    text-decoration: none;
+    color: var(--purple-dark);
+    transition: color 0.3s ease-in-out;
+}
+nav a:hover{
+    color: var(--pink);
+}
+.section {
+    background-color: var(--extra-light);
+}
+.section .section_container {
+    min-height: 100vh;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+}
+.section .section_container .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.section .section_container .content .subtitle {
+    letter-spacing: 2px;
+    color: var(--text-light);
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 1.5rem;
+}
+.section .section_container .content  .title {
+    font-size: 33px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+    line-height: 3rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+padding-bottom: 20px;
+}
+.section .section_container .content  .title .auto-type {
+ font-size: 40px;
+    font-family: 'Russo One', sans-serif;
+    font-weight: 500;
+}
+.description {
+    line-height: 1.5rem;
+    color: var(--text-light);
+    margin-bottom: 2rem;
+    justify-content: center;
+    font-family: 'Wittgenstein','serif';
+}
+.action_btns {
+    display: flex;
+    gap: 1rem;
+}
+.action_btns button {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-family: 'Poppins',sans-serif;
+
+    padding: 1rem 2rem;
+    outline: none;
+    border: 2px solid var(--purple);
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.action_btns button:not(.active){
+    border: 2px dashed plum;
+}
+.action_btns a{
+    text-decoration: none;
+}
+.active {
+    background-color: var(--purple);
+    color: white;
+}
+.active:hover {
+    background-color: var(--purple-dark);
+}
+.download_cv {
+    color: var(--purple);
+    background-color: white;
+}
+.download_cv:hover {
+    background-color: transparent;
+
+}
+.abtmebtn{
+    text-decoration: none;
+    background-color: white;
+    color: var(--purple);
+    text-align: center;
+    margin: auto;
+}
+.abtmebtn:hover{
+    background-color:lavenderblush;
+    color: var(--purple-dark);
+    border: 1px solid white;
+    transition: .3s;
+}
+.image {
+    display: grid;
+    place-items: center;
+}
+.image img {
+    width: min(25rem, 70%);
+    border-radius: 100%;
+}
+.about{
+    padding: 100px 0px;
+    width: 100%;
+    display: flex;
+  
+}
+.about img{
+    height: auto;
+    width: 430px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 5px;
+}
+.about-text{
+    width: 50%;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-left: 3rem;
+}
+.main{
+    width: 1130px;
+    max-width: 95%;
+margin: 0 auto;
+display: flex;
+align-items: center;
+justify-content: space-around;
+background-color: white;
+}
+.aboutme{
+    color: var(--purple);
+}
+.about-text h2{
+    color: var(--text-dark);
+    font-size: 60px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+.about-text h5{
+    color: var(--text-dark);
+    letter-spacing: 2px;
+    font-size: 17px;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+}
+.about-text p{
+    color: var(--text-light);
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-family: "Wittgenstein", serif;
+    font-weight: 500;
+}
+.about .main .about-text ul .icon{
+    
+    color: var(--purple-dark);
+    padding: 0.75rem;
+    cursor: pointer;
+    list-style-type: none;
+    font-size: 1.25rem;
+}
+.about .main .about-text ul .icon:hover{
+    background-color: transparent;
+}
+.about .main .about-text ul .icon:hover a{
+    color: var(--purple);
+}
+.about .main .about-text .icon .icon2{
+height: 16px;
+width: 16px;
+display: inline;
+padding-right: 8px;
+justify-content: space-between;
+align-items: left;
+
+}
+.about .about-text .basic-edu .edu-box .icon1 {
+    height: 16px;
+    width: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-inline: auto;
+   
+}
+.about .about-text .basic-edu{
+    display: flex;
+    gap: 28px;
+    margin-bottom: 28px;
+    flex-direction: row;
+}
+.about .about-text .basic-edu .edu-box{
+    padding: 20px;
+    text-align: center;
+    border: 2px dashed plum;
+    background-color: white;
+    border-radius: 30px;
+    width: 100%;
+}
+.about .about-text .basic-edu .edu-box h4{
+color: var(--purple-dark);
+font-size: 20px;
+font-family: 'Poppins',sans-serif;
+}
+.about .about-text .basic-edu .edu-box p{
+    color: var(--purple);
+    font-size: 16px;
+    font-family: "Wittgenstein", serif;
+}
+.myskills{
+    background-color: var(--extra-light);
+    padding-bottom: 70px;
+}
+.myskills .skill{
+    display: grid;
+    grid-gap: 16px;
+    padding: 16px;
+    max-width: 1024px;
+    margin: auto;
+}
+.myskills>header{
+    font-size: 40px;
+    text-align: center;
+    padding: 24px;
+    color: var(--purple-dark);
+    font-family:"Wittgenstein", serif;
+}
+.myskills .skill .set{
+    background-color:var(--purple);
+    padding: 70px;
+    width: 50%;
+    margin:auto;
+    border-radius: 16px;
+    cursor: pointer;
+    color: white;
+}
+.skill .set:hover{
+    box-shadow: 0px 12px 16px var(--pink);
+}
+.set img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+    width: 20px;
+    height: 20px;
+}
+.set > header{
+    padding-block: 24px;
+    font-size: 22px;
+    font-family: 'Kalam',cursive;
+    color: white;
+    text-align: center;
+}
+.set .list{
+    padding-block: 8px;
+    display: grid;
+    grid-template-columns: 1fr 28px;
+    line-height: 1.5rem;
+    font-family: "Wittgenstein", serif;
+    font-size: 18px;
+    
+}
+.projects{
+    background: var(--white);
+}
+.projects .project-container .project1 img{
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    height: 400px;
+    width: 100%;
+}
+.projects .heading-p{
+    padding-top: 9rem;
+    text-align: center;
+    font-size: 50px;
+    font-family:"Wittgenstein", serif;
+    color: var(--text-dark);
+}
+.projects .heading{
+    text-align: center;
+    margin-bottom: 3rem;
+    font-size: 44px;
+    font-family:"Kalam",cursive;
+    color: var(--purple);
+}
+.projects .project-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+.projects .project-container .project1{
+    padding: 20px;
+    border: 2px dashed var(--purple);
+    background-color:var(--extra-light);
+    border-radius: 20px;
+    text-align: center;
+}
+.projects .project-container .project1 h3{
+    margin-bottom: 1rem;
+    padding-bottom: 5px;
+    color: var(--purple);
+}
+.projects .project-container .project1 .header-action-aria{
+    margin-top: 1rem;
+    display: flex;
+    gap: .5rem;
+}
+.projects .project-container .project1 .header-action-aria a{
+    text-decoration: none;
+}
+.projects .project-container .project1 .header-action-aria .btn{
+    display: inline-block;
+    width: fit-content;
+    padding: 1rem;
+    margin:auto;
+    padding-left: 20px;
+    width: 8rem;
+    cursor: pointer;
+    color: var(--purple-dark);
+    border: 2px dashed plum;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Wittgenstein", serif;
+    transition: var(--transition);
+    border-radius: 10px;
+}
+.projects .project-container .project1 .header-action-aria  .btn:hover{
+    background: var(--purple);
+    color: white;
+}
+.resume{
+    background-color:var(--extra-light);
+    margin-top: 10px;
+ margin-bottom: 20px;
+ padding-bottom: 20px;
+}
+.resume  .action_btns{
+    text-decoration: none;
+}
+.resume .action_btns .download_cv{
+    margin:auto;
+    color: var(--purple);
+    background-color: white;
+    font-family: "Wittgenstein", serif;
+}
+.resume  .action_btns .download_cv:hover{
+    color: var(--purple-dark);
+    font-weight: 600;
+    background-color:transparent;
+}
+.resume .heading{
+    text-align: center;
+    margin-bottom: 1rem;
+    margin-top:10px;
+    padding-top: 10px;
+    font-size: 44px;
+    font-family:"Kalam",cursive;
+    color: var(--purple);
+}
+.resume p{
+    font-size: 20px;
+    font-family: 'Poppins',sans-serif;
+    text-align: center;
+    justify-content: space-between;
+    color: var(--text-dark);
+    display: block;
+    padding-bottom: 10px;
+
+}
+.resume a{
+    text-decoration: none;
+    font-family: 'Wittgenstein',serif;
+}
+.contact{
+    background: white;
+    margin-top: 40px;
+text-align: center;
+}
+.contact .input-box{
+    text-align: left;
+    padding-bottom: 1rem;
+    padding-left: 40px;
+    font-family: 'Poppins',sans-serif;
+    color:var(--purple);
+}
+.contact form .heading-p{
+    padding-top: 3rem;
+    text-align: center;
+    justify-content: center;
+    font-size: 50px;
+    font-family:"Wittgenstein", serif;
+    color:var(--purple-dark);
+    padding-bottom: 3rem;
+}
+.contact form{
+    width: 700px;
+    padding-bottom: 20px;
+    height: 710px;
+    line-height: 1rem;
+    margin-bottom: 8px; 
+    background: var(--extra-light);
+    display: inline-block;
+
+}
+.contact form  .input-box label{
+    line-height: 1.5rem;
+    padding-top: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: "Poppins",sans-serif;
+    font-weight: 600;
+}
+.contact .input-box .input, textarea {
+    background-color: white;
+    width: 90%;
+    margin-left: 50%;
+    font-size: 14px;
+    font-family:'Wittgenstein',serif ;
+    padding: 14px 14px;
+    border-radius: 10px;
+    border: 2px solid plum;
+    margin-bottom: 10px;
+    margin-inline-start: auto;
+}
+.contact .input-box .input:focus-within, textarea:focus-within{
+    outline: none;
+    border-color: var(--purple-dark);
+    border-width: 2px;
+}
+.contact .header-action-aria .btn{
+    padding:10px 18px;
+    margin-left: 320px;
+    color: var(--purple-dark);
+    border: 2px dashed plum;
+    background-color: white;
+    display: flex;
+   text-align: center;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Wittgenstein", serif;
+    transition: var(--transition);
+    border-radius: 10px;
+}
+.contact  .header-action-aria  .btn:hover{
+    background: var(--purple);
+    color: white;
+    border: none;
+    opacity: 80%;
+    cursor: pointer;
+}
+.section .title .auto-type{
+    color: var(--purple);
+    font-size: 25px;
+    font-family:'Russo One', sans-serif;
+    font-weight: 600;
+}
+footer{
+    margin-top: 9rem;
+    padding: 30px;
+    text-align: center;
+    background-color: var(--extra-light);
+}
+footer .nav-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+    list-style: none;
+    font-family: "Wittgenstein", serif;
+    color: var(--purple);
+    text-transform: uppercase;
+}
+footer p{
+    color: var(--purple-dark);
+    font-family:'Russo One', sans-serif;
+}
+footer .nav-links a{
+    text-decoration: none;
+}
+footer .nav-links li:hover, .nav-links li:visited{
+    color: var(--pink);
+}
+@media screen and (max-width:750px){
+ul li a{
+    font-size: 1.25rem;
+}
+.section_container {
+    padding: 10rem 1rem 5rem 1rem;
+    text-align: center;
+    grid-template-columns: repeat(1, 1fr);
+}
+.image {
+    grid-area: 1/1/2/2;
+}
+.action_btns {
+    margin: auto;
+}
+}
+@media screen and (max-width:950px){
+    .myskills .skill .set .list{
+        width: 100%;
+        flex-grow: 0;
+        flex-shrink: 0;
+       
+    }
+    .myskills .skill{
+        flex-direction: column;
+        gap: 3rem;
+    }
+   .set  .list {
+        flex-direction: column;
+        gap: 3rem;
+    }
+    .about .basic-edu .edu-box{
+        flex-wrap: wrap;
+    }
+    footer .nav-links{
+        width: 25%;
+        flex-shrink: 0;
+        flex-grow: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width:900px) {
+    nav ul{
+        display: none;
+    }
+    nav  ul .mobile1-menu{
+        display: initial;
+    }
+    .myskills .skill .set{
+        width: 100%;
+        margin-left: 5rem;
+    }
+    .section .section_container{
+        flex-wrap: wrap;
+    }
+    .section .section_container .content, .section .section_container .image {
+        width: 100%;
+        padding: 0;
+    }
+}
+@media screen and (max-width:600px){
+    .skill{
+        grid-template-columns: 1fr;
+    }
+ 
+}
+
+@media screen and (max-width:650px) {
+.skill{
+    grid-template-columns: repeat(3, 1fr);
+}
+footer .nav-links{
+    width: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.myskills .skill .set{
+    padding-bottom: 6rem;
+    margin-left: 40px;
+}
+.about .basic-edu .edu-box{
+    flex-wrap: wrap;
+    padding-left:  20px;
+}
+}
