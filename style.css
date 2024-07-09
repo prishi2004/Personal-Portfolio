@@ -564,6 +564,7 @@ footer p{
 }
 footer .nav-links a{
     text-decoration: none;
+    color:var(--purple);
 }
 footer .nav-links li:hover, .nav-links li:visited{
     color: var(--pink);
