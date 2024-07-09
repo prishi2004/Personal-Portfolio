@@ -138,6 +138,9 @@ padding-bottom: 20px;
 .action_btns button:not(.active){
     border: 2px dashed plum;
 }
+.action_btns a{
+    text-decoration: none;
+}
 .active {
     background-color: var(--purple);
     color: white;
