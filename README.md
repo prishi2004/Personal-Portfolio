@@ -1,2 +1,2 @@
-# CodSoft-
-Here's a repository for codsoft internship!
+# Personal Portfolio
+Here's a repository for my personal portfolio!
