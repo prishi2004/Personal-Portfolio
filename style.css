@@ -174,7 +174,7 @@ padding-bottom: 20px;
     place-items: center;
 }
 .image img {
-    width: min(25rem, 60%);
+    width: min(25rem, 50%);
     border-radius: 100%;
 }
 .about{
