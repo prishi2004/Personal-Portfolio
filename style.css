@@ -174,7 +174,7 @@ padding-bottom: 20px;
     place-items: center;
 }
 .image img {
-       height: auto;
+       height:200px;
     width: 430px;
     flex-shrink: 0;
     flex-grow: 0;
@@ -189,7 +189,7 @@ padding-bottom: 20px;
 }
 .about img{
     height: auto;
-    width: 430px;
+    width: 470px;
     flex-shrink: 0;
     flex-grow: 0;
     border-radius: 5px;
