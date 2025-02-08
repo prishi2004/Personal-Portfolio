@@ -174,7 +174,11 @@ padding-bottom: 20px;
     place-items: center;
 }
 .image img {
-    width: min(25rem, 50%);
+       height: auto;
+    width: 430px;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border-radius: 5px;
     border-radius: 100%;
 }
 .about{
